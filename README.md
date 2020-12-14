@@ -1,2 +1,3 @@
-# leetcode
-leetcode-solution
+leetcode 刷题
+
+https://leetcode-cn.com
