@@ -7,6 +7,6 @@ public class CalculateTest {
     @Test
     public void maxProfit() {
         Solution solution = new Solution();
-        System.out.println(solution.maxProfit(new int[]{1, 3, 2, 8, 4, 9}, 2));
+        System.out.println(solution.maxProfit1(new int[]{1, 3, 2, 8, 10, 14}, 2));
     }
 }

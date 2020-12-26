@@ -16,6 +16,7 @@ package leetcode714;
 public class Solution {
 
     /**
+     * 动态规划
      * 买入并卖出 为一次交易，缴纳一次手续费 fee
      * 输入 prices = [1, 3, 2, 8, 4, 9], fee = 2
      * 输出 8  -1+8-2-4+9-2 = 8
@@ -24,29 +25,35 @@ public class Solution {
      * @return
      */
     int maxProfit(int[] prices, int fee) {
-        int putIndex = 0;
-        int j = 1;
-        int total = 0;
+        int n = prices.length;
+        int[][] dp = new int[n][2];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1; i < n; ++i) {
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
+        }
+        return dp[n - 1][0];
+    }
 
-
-        while (j < prices.length) {
-            total = -prices[putIndex];
-            if(j == prices.length - 1) {
-                total = total + prices[j] - fee;
-                return total;
-            }
-
-            for(int i = putIndex + 1; i < prices.length; i++) {
-                int now = total + prices[i] - fee;
-                j = i;
-                if (now > 0) {
-                    putIndex = i + 1;
-                    j = putIndex + 1;
-                    total = now;
-                    break;
-                }
+    /**
+     * 贪心算法
+     * @param prices
+     * @param fee
+     * @return
+     */
+    int maxProfit1(int[] prices, int fee) {
+        int n = prices.length;
+        int buy = prices[0] + fee;
+        int profit = 0;
+        for (int i = 1; i < n; ++i) {
+            if (prices[i] + fee < buy) {
+                buy = prices[i] + fee;
+            } else if (prices[i] > buy) {
+                profit += prices[i] - buy;
+                buy = prices[i];
             }
         }
-        return total;
+        return profit;
     }
 }
