@@ -11,6 +11,12 @@ package competition;
  */
 public class Question5638 {
 
+    /**
+     * 提示使用有限队列
+     * @param apples
+     * @param days
+     * @return
+     */
     public static int eatenApples(int[] apples, int[] days) {
         return 0;
     }
