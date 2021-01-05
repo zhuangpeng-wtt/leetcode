@@ -22,7 +22,8 @@ public class Solution {
             //这里要考虑到边界情况，当遍历到最后一个字母时，看看是否满足大于等于三个的条件了
             if (i == (s.length() - 1) || s.charAt(i) != s.charAt(i + 1)) {
                 if (num >= 3) {
-                    result.add(Arrays.asList(i - num + 1, i));
+                    int startIndex = i - num + 1;
+                    result.add(Arrays.asList(startIndex, i));
                 }
                 num = 1;
             } else {
