@@ -7,6 +7,7 @@ public class Solution {
 
     /**
      * 公式解法
+     * 数字一不停左移 与 原数取与操作，结果非0，原数该位上为1，++
      * @param n
      * @return
      */
