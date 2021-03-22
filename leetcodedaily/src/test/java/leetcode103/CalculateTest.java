@@ -6,7 +6,7 @@ import org.junit.Test;
 public class CalculateTest {
 
     @Test
-    public void groupAnagrams() {
+    public void zigzagLevelOrder() {
         TreeNode root = new TreeNode(3);
 
         TreeNode left1 = new TreeNode(9);
