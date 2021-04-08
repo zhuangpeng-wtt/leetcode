@@ -23,4 +23,20 @@ public class Solution {
         return i + 1;
     }
 
+    public int removeDuplicates2(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int i = 0, k = 1;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                nums[k] = nums[j];
+                k++;
+                //替换下一个不相等的数字后,i替换指向
+                i = j;
+            }
+        }
+        return k;
+    }
+
 }
