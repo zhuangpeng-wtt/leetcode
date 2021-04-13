@@ -1,4 +1,4 @@
-package competition;
+package dependency;
 
 import java.util.List;
 

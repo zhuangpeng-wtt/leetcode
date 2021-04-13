@@ -1,6 +1,6 @@
 package leetcode341;
 
-import competition.NestedInteger;
+import dependency.NestedInteger;
 
 import java.util.ArrayList;
 import java.util.Iterator;
