@@ -9,7 +9,7 @@ import dependency.TreeNode;
  * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
  * @author zhuangpeng
  */
-public class Soultion {
+public class Solution {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (null == p && null == q) {
