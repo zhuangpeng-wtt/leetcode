@@ -7,6 +7,6 @@ public class CalculateTest {
     @Test
     public void findNumbers() {
         Solution solution = new Solution();
-        System.out.println(solution.findNumbers(new int[]{555,901,482,1771}));
+        System.out.println(solution.findNumbers(new int[]{1000}));
     }
 }
