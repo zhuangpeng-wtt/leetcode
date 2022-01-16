@@ -8,6 +8,6 @@ public class CalulateTest {
     @Test
     public void zigzagLevelOrder() {
         Solution solution = new Solution();
-        System.out.println(solution.hammingWeight(1));
+        System.out.println(solution.hammingWeight(01011011));
     }
 }
