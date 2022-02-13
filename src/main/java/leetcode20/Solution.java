@@ -24,7 +24,9 @@ public class Solution {
      * @param s
      * @return
      */
+
     public boolean isValid(String s) {
+
         if (s.length() % 2 != 0) {
             return false;
         }

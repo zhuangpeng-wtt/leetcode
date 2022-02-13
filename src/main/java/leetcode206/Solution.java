@@ -19,6 +19,10 @@ public class Solution {
         ListNode pre = null;
         ListNode current = head;
 
+        // 临时保存当前节点的下一个节点信息
+        // 将当前节点的保存的下一个节点的指向前驱节点
+        // 将前驱节点指向当前节点
+        // 将当前节点指向下一个节点
         while (current != null) {
             ListNode temp = current.next;
             current.next = pre;
